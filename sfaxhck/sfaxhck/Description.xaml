@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sfaxhck.Description" BackgroundColor="White">
+ <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+         <RowDefinition Height="2*"/>
+         <RowDefinition Height="2*"/>
+        
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" FontSize="18" Text="Who's The Next President!" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="Chocolate"></Label>
+        <Image  Grid.Row="1" Source="msp.jpg" HorizontalOptions="FillAndExpand"></Image>
+        <Label Grid.Row="2" TextColor="Black" FontSize="16" Text="In an effort to unite all clubs in Tech Clubs Sfax Network, The council of clubs presidents have created X-Coding challenge , an event that will push contestants to their extremes in a programming challenge, it is the same as your average Coding Party, but on a much bigger scale than you're used to."></Label>
+     
+ </Grid>
+    
+    
+    
+</ContentPage>

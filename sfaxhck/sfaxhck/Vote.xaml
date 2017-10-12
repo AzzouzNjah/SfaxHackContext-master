@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="sfaxhck.Vote" BackgroundColor="Bisque">
+
+<Grid>
+    <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="2*"/>
+        
+        </Grid.RowDefinitions>
+    <ListView Margin="0,0,0,0" x:Name="deligators" RowHeight="60" Grid.Row="0"  ItemSelected="Deligators_OnItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell IsEnabled="False">
+                    <Grid Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="{Binding Img}"></Image>
+                        <StackLayout Grid.Column="1">
+                            <Label   Text="{Binding Name}"  HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold" />
+                            <Label   Text="{Binding Details}"  HorizontalOptions="Start"  FontAttributes="Italic" />
+                            </StackLayout>
+                            <controls:CustomRadioButton Checked="{Binding Etat}"  IsEnabled="False" Grid.Column="2" PropertyChanged="CustomRadioButton_PropertyChanged" ></controls:CustomRadioButton>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    
+    <StackLayout Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" Orientation="Horizontal">
+        <Button Text="Cancel" BorderRadius="3" BackgroundColor="Red"></Button>
+            <Button Text="Confirm" BorderRadius="3" BackgroundColor="Green"></Button>
+        
+    </StackLayout>
+    
+</Grid>
+
+
+</ContentPage>

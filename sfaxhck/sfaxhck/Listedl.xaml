@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sfaxhck.Listedl">
+
+
+    <ListView Margin="0,0,0,0" x:Name="deligators" RowHeight="60"  >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="{Binding Img}"></Image>
+                        <StackLayout Grid.Column="1">
+                       <Label   Text="{Binding Name}"  HorizontalOptions="Start" VerticalOptions="Center" FontAttributes="Bold" />
+                            <Label   Text="{Binding Details}"  HorizontalOptions="Start"  FontAttributes="Italic" />
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ContentPage>
